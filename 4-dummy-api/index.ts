@@ -22,7 +22,7 @@ export const getUsers = async () => {
       })
       .catch((error: unknown) => {
         if (error instanceof AxiosError) {
-          reject(newApiError(error.status, error.code, error.message,))
+          reject(newApiError(error.status, error.code, error.message))
         }
 
         if (error instanceof Error) {
