@@ -66,6 +66,6 @@ export interface GetUsersResponse {
 
 export interface ApiError {
   code?: string,
-  status?: number,
+  status?: number | null,
   message?: string,
 }
