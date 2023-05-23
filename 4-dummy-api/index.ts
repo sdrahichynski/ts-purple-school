@@ -14,7 +14,7 @@ function isApiError (error: unknown): error is types.ApiError {
 }
 
 export const getUsers = async () => {
-  return new Promise<types.GetUsersResponse>(async (resolve, reject) => {
+  return new Promise<types.GetUsersResponse>((resolve, reject) => {
     axios.get<types.GetUsersResponse>("https://dummyjson.com/users")
       .then((response) => {
         if (response.status === 200) return resolve(response.data);
